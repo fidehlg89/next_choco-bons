@@ -9,6 +9,16 @@ const users = [
   },
 ];
 
+const products = [
+  {
+    id: '3958dc9e-712f-4377-85e9-fec4b6a6442a',
+    price: 25.00,
+    weight: 30,
+    image_url: '/customers/delba-de-oliveira.png',
+    description: 'Patita'
+  },
+];
+
 const customers = [
   {
     id: '3958dc9e-712f-4377-85e9-fec4b6a6442a',
@@ -185,4 +195,5 @@ module.exports = {
   customers,
   invoices,
   revenue,
+  products
 };

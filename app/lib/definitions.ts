@@ -16,6 +16,14 @@ export type Customer = {
   image_url: string;
 };
 
+export type ProductField = {
+  id: string;
+  price: number;
+  weight: number;
+  image_url: string;
+  description: string;
+};
+
 export type Invoice = {
   id: string;
   customer_id: string;

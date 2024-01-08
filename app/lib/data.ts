@@ -7,8 +7,24 @@ import {
   LatestInvoiceRaw,
   User,
   Revenue,
+  ProductField,
 } from './definitions';
 import { formatCurrency } from './utils';
+
+
+export async function fetchProducts() {
+  try {
+    const data = await sql<ProductField>`
+      SELECT id, price, weight, image_url, description FROM products
+    `;
+
+    const products = data.rows;
+    return products;
+  } catch (err) {
+    console.error('Database Error:', err);
+    throw new Error('Failed to fetch all products.');
+  }
+}
 
 export async function fetchRevenue() {
   // Add noStore() here prevent the response from being cached.
